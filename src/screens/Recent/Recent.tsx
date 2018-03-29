@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, SafeAreaView, ScrollView } from 'react-native';
 interface Props { };
 interface State { };
 
-class AboutScreen extends React.Component<Props> {
+class RecentScreen extends React.Component<Props> {
   render() {
     return (
       <SafeAreaView style={styles.wrapper}>
@@ -63,4 +63,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default AboutScreen;
+export default RecentScreen;

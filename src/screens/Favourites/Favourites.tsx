@@ -4,25 +4,22 @@ import { StyleSheet, View, Text, SafeAreaView, ScrollView } from 'react-native';
 interface Props { };
 interface State { };
 
-class HomeScreen extends React.Component<Props> {
+class FavouritesScreen extends React.Component<Props> {
   render() {
     return (
       <SafeAreaView style={styles.wrapper}>
         <ScrollView style={styles.container}>
           <Text
-            style={styles.h1}>
-            Welcome to ShoutReactNativeTS
+            style={styles.intro}>
+            Shout Digital was formed in 2009 and we have built a proud team of 30 on the back of great client solutions and a lot of hard work.
           </Text>
           <Text
             style={styles.paragraph}>
-            This is the Shout base project for developing React Native apps in TypeScript for iOS and Android. This project is based off Ash Furrow's fork of Microsoft's RNTS starter project.
+            We believe in building long term, trusted partnerships with our clients. Our quality and care is in everything we deliver. Our expertise helps ambitious clients revolutionise their digital future.
           </Text>
           <Text
-            style={styles.h2}>
-            Running the solution
-          </Text>
-          <Text style={styles.paragraph}>
-            Once loaded, run <Text style={styles.code}>npm i</Text> to get all dependencies installed, then run <Text style={styles.code}>react-native run-[ios|android]</Text>.
+            style={styles.paragraph}>
+            The Shout team are passionate about what we do and we are pleased to say that we have some of the most experienced and talented in the industry. 
           </Text>
         </ScrollView>
       </SafeAreaView>
@@ -53,11 +50,17 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     fontSize: 16,
     lineHeight: 24,
-    color: '#000'    
+    color: '#000'
+  },
+  intro: {
+    marginBottom: 16,
+    fontSize: 20,
+    lineHeight: 28,
+    fontWeight: 'bold'
   },
   code: {
     fontStyle: 'italic'
   }
 });
 
-export default HomeScreen;
+export default FavouritesScreen;
