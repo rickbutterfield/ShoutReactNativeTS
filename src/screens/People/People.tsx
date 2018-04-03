@@ -5,6 +5,10 @@ interface Props { };
 interface State { };
 
 class PeopleScreen extends React.Component<Props> {
+  static navigatorStyle = {
+    largeTitle: false
+  };
+
   render() {
     return (
       <SafeAreaView style={styles.wrapper}>

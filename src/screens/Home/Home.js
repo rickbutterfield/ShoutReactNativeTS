@@ -1,32 +1,36 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, ScrollView, TouchableHighlight } from 'react-native';
+import React, { Component, Props } from 'react';
+import { StyleSheet, View, Text, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 
-interface Props { };
-interface State { };
+class HomeScreen extends React.Component {
 
-class HomeScreen extends React.Component<Props> {
+  _onPressPeople() {
+    this.props.navigator.switchToTab({
+      tabIndex: 1
+    });
+  }
+
   render() {
     return (
       <SafeAreaView style={styles.wrapper}>
         <View style={styles.container}>
-          <TouchableHighlight style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={this._onPressPeople()}>
             <Text style={styles.buttonText}>Our People</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>World Offices</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Correspondents</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Nearest Correspondents</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Vessel Search</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Emergency Line</Text>
-          </TouchableHighlight>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     );
@@ -40,12 +44,15 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    // padding: 16
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   },
   button: {
-    flex: 1,
+    flex: 0,
+    width: '50%',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    height: '33.33333%'
   },
   buttonText: {
     color: '#fff'
